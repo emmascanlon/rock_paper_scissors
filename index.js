@@ -1,5 +1,8 @@
 
-var opponentChoices = ["rock", "paper", "scissors"]
+var opponentChoices = [
+  "<img class = 'image' src='https://i0.wp.com/tvoinews.net/wp-content/uploads/2017/09/Fist-1.jpg?fit=495%2C448'/>", 
+"<img class = 'image' src='http://www.clker.com/cliparts/Y/t/o/V/q/F/paper.svg'/>", 
+"<img class = 'image' src='http://www.hmcoloringpages.com/wp-content/uploads/two_finger_peace_sign_coloring_page_5.gif'/>"]
 
 var selection = undefined;
 var opponentChoice = undefined;
@@ -15,18 +18,18 @@ var lossesPercent = losses / totalGames * 100
 
 var rock = document.getElementById("rock");
 rock.addEventListener("click", function(event) {
-  selection = "rock";
+  selection = "<img class = 'image' src='https://i0.wp.com/tvoinews.net/wp-content/uploads/2017/09/Fist-1.jpg?fit=495%2C448'/>"
   opponentChoice = opponentChoices[Math.floor(Math.random() * 3)];
   document.getElementById("selection").innerHTML = selection
   document.getElementById("opponent_choice").innerHTML = opponentChoice
 
-  if (opponentChoice == "rock"){
+  if (opponentChoice == "<img class = 'image' src='https://i0.wp.com/tvoinews.net/wp-content/uploads/2017/09/Fist-1.jpg?fit=495%2C448'/>"){
 result = 'tie';
 ties += 1;
 document.getElementById("ties").innerHTML = ties
 }
 
-else if (opponentChoice =="scissors") {
+else if (opponentChoice =="<img class = 'image' src='http://www.hmcoloringpages.com/wp-content/uploads/two_finger_peace_sign_coloring_page_5.gif'/>") {
 result = 'win';
 wins += 1;
 document.getElementById("wins").innerHTML = wins}
@@ -47,17 +50,17 @@ document.getElementById('wins_percent').innerHTML = (wins/ totalGames * 100).toF
 
 var paper = document.getElementById("paper");
 paper.addEventListener("click", function(event) {
-  selection = "paper";
+  selection = "<img class = 'image' src='http://www.clker.com/cliparts/Y/t/o/V/q/F/paper.svg'/>";
   opponentChoice = opponentChoices[Math.floor(Math.random() * 3)];
   document.getElementById("selection").innerHTML = selection
   document.getElementById("opponent_choice").innerHTML = opponentChoice
 
-      if (opponentChoice == "paper"){
+      if (opponentChoice == selection){
   
      result = "tie";
      ties += 1;
      document.getElementById("ties").innerHTML = ties}
-    else if (opponentChoice =="rock") {
+    else if (opponentChoice =="<img class = 'image' src='https://i0.wp.com/tvoinews.net/wp-content/uploads/2017/09/Fist-1.jpg?fit=495%2C448'/>") {
   
     result = "win";
      wins += 1;
@@ -78,18 +81,18 @@ paper.addEventListener("click", function(event) {
 
 var scissors = document.getElementById("scissors");
 scissors.addEventListener("click", function(event) {
-  selection = "scissors";
+  selection = "<img class = 'image' src='http://www.hmcoloringpages.com/wp-content/uploads/two_finger_peace_sign_coloring_page_5.gif'/>";
   opponentChoice = opponentChoices[Math.floor(Math.random() * 3)];
 
   document.getElementById("selection").innerHTML = selection
   document.getElementById("opponent_choice").innerHTML = opponentChoice
 
-      if (opponentChoice == "scissors"){
+      if (opponentChoice == "<img class = 'image' src='http://www.hmcoloringpages.com/wp-content/uploads/two_finger_peace_sign_coloring_page_5.gif'/>"){
   
   result = "tie";
      ties += 1;
     document.getElementById("ties").innerHTML = ties}
-    else if (opponentChoice =="paper") {
+    else if (opponentChoice == "<img class = 'image' src='http://www.clker.com/cliparts/Y/t/o/V/q/F/paper.svg'/>") {
    
   result = "win"
      wins += 1;
@@ -115,8 +118,8 @@ reset.addEventListener("click", function(event) {
   document.getElementById("wins").innerHTML = wins
   document.getElementById("ties").innerHTML = ties
   document.getElementById("losses").innerHTML = losses
-  document.getElementById('wins_percent').innerHTML = winsPercent
-  document.getElementById('losses_percent').innerHTML = lossesPercent
-  document.getElementById('ties_percent').innerHTML = tiesPercent
+  document.getElementById('wins_percent').innerHTML = 0
+  document.getElementById('losses_percent').innerHTML = 0
+  document.getElementById('ties_percent').innerHTML = 0
 
 });

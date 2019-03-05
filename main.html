@@ -5,36 +5,55 @@
   </head>
 
   <body>
-    <h1>Play Rock Paper Scissors!</h1>
-
+    <div id = "top">
+    <h1>Make Your Choice!</h1>
+ <div id="record">
+    <button class = "btn" id = "reset">Reset Record</button> <br>
+    <table>
+        <tr>
+          <th> </th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Ties</th>
+        </tr>
+        <tr>
+          <td>Number</td>
+          <td><h5 id = "wins">0</h5></td>
+          <td><h5 id = "losses">0</h5></td>
+          <td><h5 id = "ties">0</h5></td>
+        </tr>
+        <tr>
+          <td>Percentage</td>
+          <td><h5 id = "wins_percent">0</h5></td>
+          <td><h5 id = "losses_percent">0</h5></td>
+          <td><h5 id = "ties_percent">0</h5></td>
+        </tr>
+        </table>
+        
+      </div>
+    </div>
+<div id = "options">
+  <h1> You: </h1>
     <img class = "image" id="rock" src="https://i0.wp.com/tvoinews.net/wp-content/uploads/2017/09/Fist-1.jpg?fit=495%2C448"/>
     <img class = "image" id="paper" src="http://www.clker.com/cliparts/Y/t/o/V/q/F/paper.svg"/>
     <img class = "image" id="scissors" src = "http://www.hmcoloringpages.com/wp-content/uploads/two_finger_peace_sign_coloring_page_5.gif"/>
-    
+    <h1> Your Opponent:</h1>
+    </div>
     <br>
-    Your choice: <h4 id = "selection"> </h4>
-    Your opponent's choice: <h4 id = "opponent_choice"> </h4>
-    THE RESULT: <h2 id = "result"> </h2>
+    <br>
+    <br>
+    <div class = "choices">
+      <div id = "your_choice">
+    <h4 id = "selection"> </h4></div>
+    <div id = result><h2 id = "result"> </h2></div>
+    <div id = "opponent_choice">
+    <br> <h4 id = "opponent_choice"> </h4></div>
+  </div>
+    
+    
 
-<table>
-  <tr>
-    <th>Wins</th>
-    <th>Losses</th>
-    <th>Ties</th>
-  </tr>
-  <tr>
-    <td><h5 id = "wins">0</h5></td>
-    <td><h5 id = "losses">0</h5></td>
-    <td><h5 id = "ties">0</h5></td>
-  </tr>
-  <tr>
-    <td><h5 id = "wins_percent">0</h5></td>
-    <td><h5 id = "losses_percent">0</h5></td>
-    <td><h5 id = "ties_percent">0</h5></td>
-  </tr>
-    <button class = "btn" id = "reset">Reset Record</button>
 
-  </table>
+  
 
     <script src="./index.js"></script>
   </body>

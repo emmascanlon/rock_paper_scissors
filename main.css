@@ -1,7 +1,48 @@
 * {
-  background-color: yellow}
+  background-color: deepskyblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
 
   .image {
-    height: 70px;
-    width: 70px;
+    height: 195px;
+    width: 195px;
+    border: black 5px;
   }
+
+#options {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: flex-end;
+  
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#result {
+  font-size: 340px}
+
+  #top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #record {
+    display: flex;
+    justify-content: flex-end;
+    align-items: space-around;
+  }
+
+  .btn {
+    height: 30px;
+    width: 90px;
+    background-color: yellowgreen;
+    border: purple;
